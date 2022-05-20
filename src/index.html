@@ -4,11 +4,68 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ToDo</title>
-    <link rel="stylesheet" href="./style.min.css" />
+    <link rel="shortcut icon" href="./img/favicon.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="../style.css" />
+    <title>Trello</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div class="trello">
+      <div class="container">
+        <header class="trello__header">
+          <h1 class="trello__title">Trello!</h1>
+          <div class="trello__timer">
+            <p id="hours">00</p>
+            <p id="separator">:</p>
+            <p id="minutes">00</p>
+          </div>
+          <a href="#" class="button__settings"></a>
+        </header>
+        <section class="desc">
+          <div class="desc__category todo">
+            <div class="topic">
+              <h2 class="topic__title">Todo</h2>
+              <p class="topic__count"></p>
+            </div>
+            <div class="task__list"></div>
+            <button type="button" class="button__add">Add Task</button>
+          </div>
+
+          <div class="desc__category progress">
+            <div class="topic">
+              <h2 class="topic__title">Progress</h2>
+              <p class="topic__count"></p>
+            </div>
+            <div class="task__list"></div>
+          </div>
+
+          <div class="desc__category done">
+            <div class="topic">
+              <h2 class="topic__title">Done</h2>
+              <p class="topic__count"></p>
+            </div>
+            <div class="task__list"></div>
+            <button class="button__deleteAll">Delete All</button>
+          </div>
+        </section>
+        <div class="modal">
+          <div class="warning">
+            <p class="warning__title">Warning</p>
+            <button class="warning__cancel">Cancel</button>
+            <button class="warning__confirm">Confirm</button>
+          </div>
+          <div class="overload">
+            <p class="overload__title">Слишком много тасков в Progress!</p>
+            <button class="overload__confirm">Confirm</button>
+          </div>
+          <div class="users">
+            <p class="users__title">All users</p>
+            <div class="users__list"></div>
+            <div class="users__taskDisplay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./app.js"></script>
   </body>
-  <script src="./app.js"></script>
 </html>
